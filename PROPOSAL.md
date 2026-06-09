@@ -34,7 +34,7 @@ Premier League Matches 1993-2023 by Evan Gower, downloaded from Kaggle. Contains
 
 ## Expected Outcomes
 
-A working end-to-end notebook covering all Zindua modules in one project. The classifier is expected to reach around 52-55% accuracy on a 3-class problem (random baseline is 33%, always-predict-home baseline is around 46%). The regression model will be evaluated on RMSE and R2. Feature importance plots will show which rolling stats drive predictions most.
+A working notebook that goes from raw match data to trained models. For classification I want to beat the naive baseline of always predicting a home win. The regression model will be evaluated on RMSE and R2. Feature importance plots will show which rolling stats the model relies on most.
 
 ## Limitations
 
