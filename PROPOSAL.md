@@ -14,9 +14,9 @@ Premier League Matches 1993-2023 by Evan Gower (Kaggle). 12,026 matches, 50 team
 
 ## Approach
 
-I start with exploratory analysis and SQL queries to understand the data, then build a full classification pipeline covering feature engineering, dimensionality reduction, multiple classifiers, hyperparameter tuning, and a neural network comparison.
+I start with exploratory analysis and SQL queries to understand the data, then build a classification pipeline covering feature engineering, multiple classifiers, hyperparameter tuning, and a neural network comparison.
 
-**Feature engineering** — rolling 5-match form per team (goals scored, goals conceded, win rate, draw rate) computed without leaking future data. Log transforms on skewed features, StandardScaler for scaling, and PCA to reduce dimensions and visualize how well the classes separate.
+**Feature engineering** — rolling 5-match form per team (goals scored, goals conceded, win rate, draw rate) computed without leaking future data, plus difference features comparing the home and away team's current form. I check the feature distributions and scale them with StandardScaler before modeling.
 
 **Classifiers** — LDA as a linear baseline, Random Forest, Gradient Boosting, and an LSTM that treats each team's last 10 results as a sequence input.
 
