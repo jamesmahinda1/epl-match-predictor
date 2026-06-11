@@ -18,7 +18,7 @@ I start with exploratory analysis and SQL queries to understand the data, then b
 
 **Feature engineering** — rolling 5-match form per team (goals scored, goals conceded, win rate, draw rate) computed without leaking future data. Log transforms on skewed features, StandardScaler for scaling, and PCA to reduce dimensions and visualize how well the classes separate.
 
-**Classifiers** — LDA as a baseline (from W1), Random Forest, Gradient Boosting, and an LSTM that treats each team's last 10 results as a sequence input.
+**Classifiers** — LDA as a linear baseline, Random Forest, Gradient Boosting, and an LSTM that treats each team's last 10 results as a sequence input.
 
 **Evaluation** — k-fold cross-validation, GridSearchCV tuning on the best model, final test set evaluation with confusion matrix and per-class F1. Draws are expected to be the hardest class since they are the least predictable outcome in football.
 
